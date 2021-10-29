@@ -2,22 +2,28 @@
 
 Booking API is a Net Core WebApi for a Cancun Hotel booking process.
 
-# Preparation
-To build and execute this project is required:
+# Requirements
+To build and run this project are required:
 - .NET 5.0.11
-- 'localdb'
+- SQL Server Express LocalDB for local run.
 
-'''
-cd booking-challenge
-dotnet restore
-dotnet ef database update -p .\src\API\Booking.API.csproj
-'''
+```powershell
+cd booking-challenge # Go into project folder
+dotnet restore # Restore dependencies
+dotnet ef database update -p .\src\API\Booking.API.csproj # DB creation
+```
 
 
 # Testing
+The project has 2 projects of tests. `Core.Tests` for validation model unit testing and `API.Tests` with API features testing. Both of them are located on folder `\tests\`.
 
-'''
+To execute all tests:
+
+```
 dotnet test
-'''
+```
 
 # Run
+```
+dotnet run
+```
